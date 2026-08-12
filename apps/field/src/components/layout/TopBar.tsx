@@ -1,0 +1,4 @@
+import type { ReactNode } from "react";
+import { ArrowLeftIcon, BellIcon } from "@phosphor-icons/react";
+import { Brand } from "@nicepatrol/ui";
+export function TopBar({title,back,action}:{title?:string;back?:()=>void;action?:ReactNode}) { return <header className="sticky top-0 z-20 flex h-16 items-center justify-between border-b border-[var(--np-line)] bg-white/95 px-4 backdrop-blur">{back?<button onClick={back} className="grid size-9 place-items-center rounded-[10px] bg-slate-100" aria-label="Go back"><ArrowLeftIcon size={19}/></button>:<Brand compact/>}<p className="absolute left-1/2 -translate-x-1/2 font-medium">{title}</p>{action??<button className="relative grid size-9 place-items-center rounded-[10px] bg-slate-100"><BellIcon size={19}/><i className="absolute right-1.5 top-1.5 size-2 rounded-full bg-[var(--np-critical)] ring-2 ring-slate-100"/></button>}</header> }

@@ -1,0 +1,27 @@
+{
+  "name": "nicepatrol",
+  "private": true,
+  "version": "0.1.0",
+  "packageManager": "pnpm@10.11.0",
+  "scripts": {
+    "dev:dashboard": "pnpm --filter @nicepatrol/dashboard dev",
+    "dev:field": "pnpm --filter @nicepatrol/field dev",
+    "dev:visitor": "pnpm --filter @nicepatrol/visitor dev",
+    "build": "pnpm --filter './apps/*' build",
+    "typecheck": "pnpm --filter './apps/*' typecheck",
+    "deploy:dashboard": "pnpm --filter @nicepatrol/dashboard deploy",
+    "deploy:field": "pnpm --filter @nicepatrol/field deploy",
+    "deploy:visitor": "pnpm --filter @nicepatrol/visitor deploy",
+    "deploy": "pnpm run deploy:dashboard && pnpm run deploy:field && pnpm run deploy:visitor"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.1.14",
+    "@types/react": "^19.1.16",
+    "@types/react-dom": "^19.1.9",
+    "@vitejs/plugin-react": "^5.0.4",
+    "tailwindcss": "^4.1.14",
+    "typescript": "^5.9.3",
+    "vite": "^7.1.9",
+    "wrangler": "^4.121.0"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "name": "@nicepatrol/mock-api",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "dependencies": {
+    "@nicepatrol/domain": "workspace:*"
+  }
+}

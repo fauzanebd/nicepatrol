@@ -1,0 +1,7 @@
+@source "../../../packages/ui/node_modules/@cloudflare/kumo/dist/**/*.{js,jsx,ts,tsx}";
+@source "../../../packages/ui/src/**/*.{js,jsx,ts,tsx}";
+@import "@cloudflare/kumo/styles/tailwind";
+@import "tailwindcss";
+@import "@nicepatrol/theme/styles.css";
+
+body { background: var(--np-night); }

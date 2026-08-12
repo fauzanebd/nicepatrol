@@ -1,0 +1,27 @@
+@source "../../../packages/ui/node_modules/@cloudflare/kumo/dist/**/*.{js,jsx,ts,tsx}";
+@source "../../../packages/ui/src/**/*.{js,jsx,ts,tsx}";
+@import "@cloudflare/kumo/styles/tailwind";
+@import "tailwindcss";
+@import "leaflet/dist/leaflet.css";
+@import "@nicepatrol/theme/styles.css";
+
+@theme {
+  --color-kumo-brand: var(--np-brand);
+}
+
+.np-leaflet-dark .leaflet-tile {
+  filter: brightness(.5) invert(1) contrast(1.25) hue-rotate(180deg) saturate(.55);
+}
+
+.np-leaflet-dark .leaflet-control-attribution {
+  background: rgba(7, 21, 29, .75);
+  color: #82939d;
+  font-size: 9px;
+}
+
+.np-leaflet-dark .leaflet-control-attribution a { color: #8fdcff; }
+.np-leaflet-dark .leaflet-control-zoom a {
+  border-color: #27404d;
+  background: rgba(7, 21, 29, .9);
+  color: white;
+}

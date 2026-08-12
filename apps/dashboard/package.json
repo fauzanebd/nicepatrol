@@ -1,0 +1,33 @@
+{
+  "name": "@nicepatrol/dashboard",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --port 4173",
+    "build": "tsc -b && vite build",
+    "typecheck": "tsc -b",
+    "deploy": "pnpm run build && wrangler pages deploy"
+  },
+  "dependencies": {
+    "@hookform/resolvers": "^5.2.2",
+    "@cloudflare/kumo": "^2.8.0",
+    "@nicepatrol/domain": "workspace:*",
+    "@nicepatrol/mock-api": "workspace:*",
+    "@nicepatrol/theme": "workspace:*",
+    "@nicepatrol/ui": "workspace:*",
+    "@phosphor-icons/react": "^2.1.10",
+    "@tanstack/react-query": "^5.90.5",
+    "leaflet": "^1.9.4",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "react-leaflet": "^5.0.0",
+    "react-hook-form": "^7.62.0",
+    "react-router-dom": "^7.9.4",
+    "recharts": "^3.10.1",
+    "zod": "^4.1.12"
+  },
+  "devDependencies": {
+    "@types/leaflet": "^1.9.21"
+  }
+}

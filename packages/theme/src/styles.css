@@ -1,0 +1,74 @@
+:root {
+  color-scheme: light;
+  font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-synthesis: none;
+  --np-brand: #0876c9;
+  --np-brand-strong: #005da8;
+  --np-brand-soft: #e9f4fc;
+  --np-canvas: #f5f7f8;
+  --np-surface: #ffffff;
+  --np-ink: #18242d;
+  --np-muted: #667782;
+  --np-line: #dce4e8;
+  --np-line-strong: #c6d2d8;
+  --np-night: #07151d;
+  --np-night-soft: #0d222e;
+  --np-live: #25b9e8;
+  --np-success: #17835b;
+  --np-warning: #d88700;
+  --np-critical: #ce3d4f;
+  --np-radius-sm: 8px;
+  --np-radius-md: 12px;
+  --np-radius-lg: 16px;
+  --np-shadow: 0 12px 34px rgba(18, 39, 52, 0.08);
+  --color-kumo-brand: var(--np-brand);
+  --color-kumo-brand-hover: var(--np-brand-strong);
+}
+
+* { box-sizing: border-box; }
+html { background: var(--np-canvas); }
+body { margin: 0; min-width: 320px; min-height: 100vh; color: var(--np-ink); background: var(--np-canvas); }
+button, input, textarea, select { font: inherit; }
+button { cursor: pointer; }
+a { text-decoration: none; }
+
+.np-scrollbar { scrollbar-width: thin; scrollbar-color: #b8c5cc transparent; }
+.np-scrollbar::-webkit-scrollbar { width: 6px; height: 6px; }
+.np-scrollbar::-webkit-scrollbar-thumb { background: #b8c5cc; border-radius: 999px; }
+
+.np-grid {
+  background-image:
+    linear-gradient(to right, rgba(163, 181, 191, 0.11) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(163, 181, 191, 0.11) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.np-ops-grid {
+  background-image:
+    linear-gradient(to right, rgba(63, 116, 140, 0.14) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(63, 116, 140, 0.14) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+.np-corner-frame { position: relative; }
+.np-corner-frame::before,
+.np-corner-frame::after {
+  content: "";
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  background: currentColor;
+}
+.np-corner-frame::before { top: -1px; left: -1px; }
+.np-corner-frame::after { right: -1px; bottom: -1px; }
+
+@keyframes np-pulse-ring {
+  0% { box-shadow: 0 0 0 0 rgba(37, 185, 232, 0.38); }
+  70% { box-shadow: 0 0 0 8px rgba(37, 185, 232, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(37, 185, 232, 0); }
+}
+.np-live-pulse { animation: np-pulse-ring 2s infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; }
+}

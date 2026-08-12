@@ -38,11 +38,13 @@ pnpm build
 Each app is deployed independently as a Cloudflare Pages project. Git-connected projects
 build from the workspace root with these settings:
 
-| Project | Build command | Output directory |
-| --- | --- | --- |
-| `nicepatrol-dashboard` | `pnpm --filter @nicepatrol/dashboard build` | `apps/dashboard/dist` |
-| `nicepatrol-field` | `pnpm --filter @nicepatrol/field build` | `apps/field/dist` |
-| `nicepatrol-visitor` | `pnpm --filter @nicepatrol/visitor build` | `apps/visitor/dist` |
+| Project | Live URL | Build command | Output directory |
+| --- | --- | --- | --- |
+| `nicepatrol-dashboard` | [nicepatrol-dashboard.pages.dev](https://nicepatrol-dashboard.pages.dev) | `pnpm --filter @nicepatrol/dashboard build` | `apps/dashboard/dist` |
+| `nicepatrol-field` | [nicepatrol-field.pages.dev](https://nicepatrol-field.pages.dev) | `pnpm --filter @nicepatrol/field build` | `apps/field/dist` |
+| `nicepatrol-visitor` | [nicepatrol-visitor.pages.dev](https://nicepatrol-visitor.pages.dev) | `pnpm --filter @nicepatrol/visitor build` | `apps/visitor/dist` |
+
+Pushes to `main` automatically create production deployments for all three projects.
 
 For a manual deployment with Wrangler:
 

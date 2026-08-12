@@ -9,6 +9,8 @@
   --color-kumo-brand: var(--np-brand);
 }
 
+.np-leaflet-dark { font-family: var(--font-sans); }
+
 .np-leaflet-dark .leaflet-tile {
   filter: brightness(.5) invert(1) contrast(1.25) hue-rotate(180deg) saturate(.55);
 }

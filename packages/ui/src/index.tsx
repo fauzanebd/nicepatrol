@@ -8,7 +8,7 @@ export function Brand({ compact = false, inverse = false }: { compact?: boolean;
       <span className={`grid size-9 place-items-center rounded-[10px] ${inverse ? "bg-white text-[var(--np-brand)]" : "bg-[var(--np-brand)] text-white"}`}>
         <ShieldCheckIcon size={21} weight="fill" />
       </span>
-      {!compact && <span className={`text-[19px] font-semibold ${inverse ? "text-white" : "text-[var(--np-ink)]"}`}>nicepatrol</span>}
+      {!compact && <span className={`np-font-display text-[19px] font-semibold ${inverse ? "text-white" : "text-[var(--np-ink)]"}`}>nicepatrol</span>}
     </div>
   );
 }

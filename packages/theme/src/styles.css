@@ -1,7 +1,57 @@
+@font-face {
+  font-family: "Roobert";
+  src: url("./fonts/Roobert-Regular.otf") format("opentype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roobert";
+  src: url("./fonts/Roobert-Medium.otf") format("opentype");
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roobert";
+  src: url("./fonts/Roobert-SemiBold.otf") format("opentype");
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SF Pro Text";
+  src: url("./fonts/SFProText-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SF Pro Text";
+  src: url("./fonts/SFProText-Medium.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SF Pro Text";
+  src: url("./fonts/SFProText-Semibold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+}
+
 :root {
   color-scheme: light;
-  font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: "SF Pro Text", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   font-synthesis: none;
+  --font-sans: "SF Pro Text", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --np-font-display: "Roobert", "SF Pro Text", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --np-brand: #0876c9;
   --np-brand-strong: #005da8;
   --np-brand-soft: #e9f4fc;
@@ -31,6 +81,8 @@ body { margin: 0; min-width: 320px; min-height: 100vh; color: var(--np-ink); bac
 button, input, textarea, select { font: inherit; }
 button { cursor: pointer; }
 a { text-decoration: none; }
+
+h1, h2, h3, h4, h5, h6, .np-font-display { font-family: var(--np-font-display); }
 
 .np-scrollbar { scrollbar-width: thin; scrollbar-color: #b8c5cc transparent; }
 .np-scrollbar::-webkit-scrollbar { width: 6px; height: 6px; }

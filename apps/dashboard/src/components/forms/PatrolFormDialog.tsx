@@ -44,13 +44,13 @@ export function PatrolFormDialog({ open, onOpenChange, mode, onSubmit }: PatrolF
     <form onSubmit={submit} className="grid gap-5 px-6 py-5">
       <Input label="Patrol name" placeholder="e.g. Patroli Alpha-04" error={errors.route?.message} {...register("route")} />
       <div className="grid gap-4 sm:grid-cols-2">
-        <Controller name="officer" control={control} render={({ field }) => <Select label="Officer" hideLabel={false} placeholder="Select an officer" value={field.value || null} onValueChange={(value) => field.onChange(value ?? "")} error={errors.officer?.message}>
+        <Controller name="officer" control={control} render={({ field }) => <Select className="w-full" label="Officer" hideLabel={false} placeholder="Select an officer" value={field.value || null} onValueChange={(value) => field.onChange(value ?? "")} error={errors.officer?.message}>
           <Select.Option value="Rizky Pratama">Rizky Pratama</Select.Option>
           <Select.Option value="Dimas Saputra">Dimas Saputra</Select.Option>
           <Select.Option value="Fajar Nugroho">Fajar Nugroho</Select.Option>
           <Select.Option value="Siti Rahma">Siti Rahma</Select.Option>
         </Select>} />
-        <Controller name="area" control={control} render={({ field }) => <Select label="Work area" hideLabel={false} placeholder="Select an area" value={field.value || null} onValueChange={(value) => field.onChange(value ?? "")} error={errors.area?.message}>
+        <Controller name="area" control={control} render={({ field }) => <Select className="w-full" label="Work area" hideLabel={false} placeholder="Select an area" value={field.value || null} onValueChange={(value) => field.onChange(value ?? "")} error={errors.area?.message}>
           <Select.Option value="Gudang timur">Gudang timur</Select.Option>
           <Select.Option value="Gedung utama">Gedung utama</Select.Option>
           <Select.Option value="Area produksi">Area produksi</Select.Option>
@@ -62,12 +62,12 @@ export function PatrolFormDialog({ open, onOpenChange, mode, onSubmit }: PatrolF
         <Input type="time" label="Start time" error={errors.startTime?.message} {...register("startTime")} />
       </div>
       <div className="grid gap-4 sm:grid-cols-2">
-        <Controller name="checkpointSet" control={control} render={({ field }) => <Select label="Checkpoint set" hideLabel={false} placeholder="Select checkpoints" value={field.value || null} onValueChange={(value) => field.onChange(value ?? "")} error={errors.checkpointSet?.message}>
+        <Controller name="checkpointSet" control={control} render={({ field }) => <Select className="w-full" label="Checkpoint set" hideLabel={false} placeholder="Select checkpoints" value={field.value || null} onValueChange={(value) => field.onChange(value ?? "")} error={errors.checkpointSet?.message}>
           <Select.Option value="East warehouse · 7 points">East warehouse · 7 points</Select.Option>
           <Select.Option value="Main building · 8 points">Main building · 8 points</Select.Option>
           <Select.Option value="Production floor · 10 points">Production floor · 10 points</Select.Option>
         </Select>} />
-        <Controller name="repeat" control={control} render={({ field }) => <Select label="Repeat" hideLabel={false} value={field.value} onValueChange={(value) => field.onChange(value ?? "once")}>
+        <Controller name="repeat" control={control} render={({ field }) => <Select className="w-full" label="Repeat" hideLabel={false} value={field.value} onValueChange={(value) => field.onChange(value ?? "once")}>
           <Select.Option value="once">Once</Select.Option>
           <Select.Option value="daily">Every day</Select.Option>
           <Select.Option value="weekdays">Weekdays</Select.Option>

@@ -16,10 +16,10 @@ export function ShiftFormDialog({ open, onOpenChange, onSubmit }: { open: boolea
     <form onSubmit={submit} className="grid gap-5 px-6 py-5">
       <Input label="Shift name" placeholder="e.g. Shift siang" error={errors.name?.message} {...register("name")} />
       <div className="grid gap-4 sm:grid-cols-2">
-        <Controller name="officer" control={control} render={({ field }) => <Select label="Officer" hideLabel={false} placeholder="Select an officer" value={field.value || null} onValueChange={(value) => field.onChange(value ?? "")} error={errors.officer?.message}>
+        <Controller name="officer" control={control} render={({ field }) => <Select className="w-full" label="Officer" hideLabel={false} placeholder="Select an officer" value={field.value || null} onValueChange={(value) => field.onChange(value ?? "")} error={errors.officer?.message}>
           <Select.Option value="Rizky Pratama">Rizky Pratama</Select.Option><Select.Option value="Dimas Saputra">Dimas Saputra</Select.Option><Select.Option value="Fajar Nugroho">Fajar Nugroho</Select.Option><Select.Option value="Siti Rahma">Siti Rahma</Select.Option>
         </Select>} />
-        <Controller name="area" control={control} render={({ field }) => <Select label="Work area" hideLabel={false} placeholder="Select an area" value={field.value || null} onValueChange={(value) => field.onChange(value ?? "")} error={errors.area?.message}>
+        <Controller name="area" control={control} render={({ field }) => <Select className="w-full" label="Work area" hideLabel={false} placeholder="Select an area" value={field.value || null} onValueChange={(value) => field.onChange(value ?? "")} error={errors.area?.message}>
           <Select.Option value="Gudang timur">Gudang timur</Select.Option><Select.Option value="Gedung utama">Gedung utama</Select.Option><Select.Option value="Area produksi">Area produksi</Select.Option><Select.Option value="Gerbang utama">Gerbang utama</Select.Option>
         </Select>} />
       </div>
